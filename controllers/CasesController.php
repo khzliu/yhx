@@ -56,7 +56,7 @@ class CasesController extends Controller
     {
         
         //实现文章分页
-        $query = ArticleCases::find()->select(['id', 'title']);
+        $query = ArticleCases::find()->select(['id', 'title'])->orderBy('id DESC');
         //$query = ArticleCases::find()->all();
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount'=> $countQuery->count()]);
@@ -92,9 +92,10 @@ class CasesController extends Controller
         //设置文章
         $presentArticle = ArticleCases::find()->where('id=' . $id)->one();
         //上一条:select * from 表 where 数据id<@当前显示数据id order by 数据_id asc) limit 1
-        $previousArticle = ArticleCases::find()->select(['id', 'title', 'type'])->where('id<' . $id)->orderBy('id DESC')->limit(1)->one();
+        $previousArticle = ArticleCases::find()->select(['id', 'title'])->where('id>' . $id)->orderBy('id ASC')->limit(1)->one();
         //下一条:select * from 表 where 数据id>@当前显示数据id order by 数据_id desc) limit 1
-        $nextArticle = ArticleCases::find()->select(['id', 'title', 'type'])->where('id>' . $id)->orderBy('id ASC')->limit(1)->one();
+        $nextArticle = ArticleCases::find()->select(['id', 'title'])->where('id<' . $id)->orderBy('id DESC')->limit(1)->one();
+                
         
         
         

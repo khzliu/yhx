@@ -75,7 +75,7 @@ class ServiceController extends Controller
         
         
         //实现文章分页
-        $query = ArticleService::find()->select(['id', 'title', 'type'])->where(['type' => $type[0]]);
+        $query = ArticleService::find()->select(['id', 'title', 'type'])->where(['type' => $type[0]])->orderBy('id DESC');
         //$query = ArticleService::find()->all();
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount'=> $countQuery->count()]);
@@ -115,9 +115,9 @@ class ServiceController extends Controller
         $id = $_GET['id'];
         $presentArticle = ArticleService::find()->where('id=' . $id)->one();
         //上一条:select * from 表 where 数据id<@当前显示数据id order by 数据_id asc) limit 1
-        $previousArticle = ArticleService::find()->select(['id', 'title', 'type'])->where('id<' . $id)->orderBy('id DESC')->limit(1)->one();
+        $previousArticle = ArticleService::find()->select(['id', 'title', 'type'])->where('id>' . $id)->orderBy('id ASC')->limit(1)->one();
         //下一条:select * from 表 where 数据id>@当前显示数据id order by 数据_id desc) limit 1
-        $nextArticle = ArticleService::find()->select(['id', 'title', 'type'])->where('id>' . $id)->orderBy('id ASC')->limit(1)->one();
+        $nextArticle = ArticleService::find()->select(['id', 'title', 'type'])->where('id<' . $id)->orderBy('id DESC')->limit(1)->one();
         
         
         

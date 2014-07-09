@@ -56,7 +56,7 @@ class NewsController extends Controller
     {
         
         //实现文章分页
-        $query = ArticleNews::find()->select(['id', 'title']);
+        $query = ArticleNews::find()->select(['id', 'title'])->orderBy('id DESC');
         //$query = ArticleNews::find()->all();
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount'=> $countQuery->count()]);
@@ -92,9 +92,9 @@ class NewsController extends Controller
         //设置文章
         $presentArticle = ArticleNews::find()->where('id=' . $id)->one();
         //上一条:select * from 表 where 数据id<@当前显示数据id order by 数据_id asc) limit 1
-        $previousArticle = ArticleNews::find()->select(['id', 'title', 'type'])->where('id<' . $id)->orderBy('id DESC')->limit(1)->one();
+        $previousArticle = ArticleNews::find()->select(['id', 'title'])->where('id>' . $id)->orderBy('id ASC')->limit(1)->one();
         //下一条:select * from 表 where 数据id>@当前显示数据id order by 数据_id desc) limit 1
-        $nextArticle = ArticleNews::find()->select(['id', 'title', 'type'])->where('id>' . $id)->orderBy('id ASC')->limit(1)->one();
+        $nextArticle = ArticleNews::find()->select(['id', 'title'])->where('id<' . $id)->orderBy('id DESC')->limit(1)->one();
         
         
         

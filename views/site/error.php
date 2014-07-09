@@ -22,6 +22,8 @@ $this->title = $name;
     </p>
     <p>
         Please contact us if you think this is a server error. Thank you.
+        <br>
+        Email:khzliu@163.com
     </p>
 
 </div>

@@ -32,35 +32,36 @@
             
             <div class="col-xs-12 col-sm-12" id="sidebar" role="navigation">
                 <div class="col-md-12">
-                    <h4 style="text-align: left"><strong><?php if(!($presentArticle == null)) echo $presentArticle->title; ?></strong></h4>
-                    <div class="bg-success row" style=";padding: 2px;">
-                        <div class="col-md-6 text-left" ></div>
-                        <div class="col-md-3 text-right" >来源：<?php  if(!($presentArticle == null)) echo $presentArticle->editer; ?></div>
-                        <div class="col-md-3 text-right" >日期：<?php if(!($presentArticle == null)) echo $presentArticle->edittime; ?></div>
-                    </div>
-                    <p style="margin-top: 20px;margin-bottom: 20px"><?php if(!($presentArticle == null)) echo $presentArticle->content; ?></p>
-                    <div class="bg-info col-md-12 text-left"><font color='blue'>上一篇：</font>
-                        <?php 
-                        if($previousArticle==null)
-                        {
-                            echo '没有了';
-                        }else{
-                            echo '<a href="?r=news/article&type=' . $previousArticle->type . '&id=' . $previousArticle->id . '">' . $previousArticle->title . '</a>';
-                        }
-                        ?>
+                    <div class="well" style="margin-bottom: 50px;">
+                        <h4 style="text-align: left"><strong><?php if(!($presentArticle == null)) echo $presentArticle->title; ?></strong></h4>
+                        <div class="bg-success row" style=";padding: 2px;">
+                            <div class="col-md-6 text-left" ></div>
+                            <div class="col-md-3 text-right" >来源：<?php  if(!($presentArticle == null)) echo $presentArticle->editer; ?></div>
+                            <div class="col-md-3 text-right" >日期：<?php if(!($presentArticle == null)) echo $presentArticle->edittime; ?></div>
                         </div>
-                    <div class="bg-info col-md-12 text-left"><font color='blue'>下一篇：</font>
-                        <?php 
-                    if($nextArticle==null)
-                        {
-                            echo '没有了';
-                        }else{
-                            echo '<a href="?r=news/article&type=' . $nextArticle->type . '&id=' . $nextArticle->id . '">' . $nextArticle->title . '</a>';
-                        }
-                       ?></div>
-                <div>
-            </div>
-
+                        <p style="margin-top: 20px;margin-bottom: 20px"><?php if(!($presentArticle == null)) echo $presentArticle->content; ?></p>
+                        
+                        <div class="bg-info text-left"><font color='blue'>上一篇：</font>
+                            <?php 
+                            if($previousArticle==null)
+                            {
+                                echo '没有了';
+                            }else{
+                                echo '<a href="?r=news/article&id=' . $previousArticle->id . '">' . $previousArticle->title . '</a>';
+                            }
+                            ?>
+                        </div>
+                        <div class="bg-info text-left"><font color='blue'>下一篇：</font>
+                            <?php 
+                            if($nextArticle==null)
+                            {
+                                echo '没有了';
+                            }else{
+                                echo '<a href="?r=news/article&id=' . $nextArticle->id . '">' . $nextArticle->title . '</a>';
+                            }
+                           ?>
+                        </div>
+                    </div>
+                </div>
             </div><!--/span-->
-        </div><!--/.container-->
     </div><!--/.contain page-->

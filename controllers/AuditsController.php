@@ -75,7 +75,7 @@ class AuditsController extends Controller
         
         
         //实现文章分页
-        $query = ArticleAudits::find()->select(['id', 'title', 'type'])->where(['type' => $type[0]]);
+        $query = ArticleAudits::find()->select(['id', 'title', 'type'])->where(['type' => $type[0]])->orderBy('id DESC');
         //$query = ArticleAudits::find()->all();
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount'=> $countQuery->count()]);
@@ -115,9 +115,10 @@ class AuditsController extends Controller
         $id = $_GET['id'];
         $presentArticle = ArticleAudits::find()->where('id=' . $id)->one();
         //上一条:select * from 表 where 数据id<@当前显示数据id order by 数据_id asc) limit 1
-        $previousArticle = ArticleAudits::find()->select(['id', 'title', 'type'])->where('id<' . $id)->orderBy('id DESC')->limit(1)->one();
+        $previousArticle = ArticleAudits::find()->select(['id', 'title', 'type'])->where('id>' . $id)->orderBy('id ASC')->limit(1)->one();
         //下一条:select * from 表 where 数据id>@当前显示数据id order by 数据_id desc) limit 1
-        $nextArticle = ArticleAudits::find()->select(['id', 'title', 'type'])->where('id>' . $id)->orderBy('id ASC')->limit(1)->one();
+        $nextArticle = ArticleAudits::find()->select(['id', 'title', 'type'])->where('id<' . $id)->orderBy('id DESC')->limit(1)->one();
+                
         
         
         

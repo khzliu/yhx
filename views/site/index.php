@@ -20,7 +20,7 @@ $this->registerJsFile('/js/docs.min.js');
             <div class="carousel-caption">
               <h1><strong>认证咨询</strong></h1>
               <p>我公司可以提供国际质量管理体系认证咨询、国际环境管理体系认证咨询、职业健康安全管理体系认证咨询、食品安全管理体系认证咨询、3C产品安全认证咨询、QS食品认证咨询、国军标质量管理体系认证咨询、国军标质量管理体系认证咨询、13485医疗器械认证咨询、HSE管理体系认证咨询等认证咨询工作.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">详情..</a></p>
+              <p><a class="btn btn-lg btn-primary" href="?r=cert%2Findex" role="button">详情..</a></p>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@ $this->registerJsFile('/js/docs.min.js');
 				现场品质管理咨询、
 				供应商管理优化咨询、
 				质量成本管理咨询</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">更多..</a></p>
+              <p><a class="btn btn-lg btn-primary" href="?r=train%2Findex" role="button">更多..</a></p>
             </div>
           </div>
         </div>
@@ -55,7 +55,7 @@ $this->registerJsFile('/js/docs.min.js');
 				BRC认证方案、
 				外文IOS咨询、
 				EICC认证/验厂方案、
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">了解..</a></p>
+              <p><a class="btn btn-lg btn-primary" href="?r=service%2Findex" role="button">了解..</a></p>
             </div>
           </div>
         </div>
@@ -79,13 +79,13 @@ $this->registerJsFile('/js/docs.min.js');
                 <address>
                     <strong>北京英华信咨询服务有限公司</strong>
 					<br>
-                    <br><abbr title="Address">地址:</abbr>北京市闵庄路甲89号
+                    <br><abbr title="Address">地址:</abbr>北京市丰台区
                     <br>
                 </address>
                 <address>
                     <abbr title="Phone">电话:</abbr>(123) 456-7890
                     <br>
-                    <abbr title="Email">邮箱:</abbr> <a href="mailto:#">first.last@example.com</a>
+                    <abbr title="Email">邮箱:</abbr> <a href="mailto:#">khzliu@163.com</a>
                 </address>
             </div>
         </div>
@@ -118,30 +118,30 @@ $this->registerJsFile('/js/docs.min.js');
 		<div class="row">
 			<h2><strong>成功案例</strong></h2>
             <div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/anli.jpg"></a>
             </div>
             <div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/2.jpg"></a>
             </div><div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/3.jpg"></a>
             </div><div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/4.jpg"></a>
             </div><div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/5.jpg"></a>
             </div><div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/6.jpg"></a>
             </div><div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/7.png"></a>
             </div><div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/8.png"></a>
             </div><div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/9.png"></a>
             </div><div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/10.jpg"></a>
             </div><div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/11.jpg"></a>
             </div><div class="col-sm-2">
-                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/anli.jpg"></a>
+                <a href="#"><img class="img-rounded img-responsive text-center" src="pictures/cases/12.png"></a>
             </div>
         </div>
 

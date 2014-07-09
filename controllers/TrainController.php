@@ -75,7 +75,7 @@ class TrainController extends Controller
         
         
         //实现文章分页
-        $query = ArticleTrain::find()->select(['id', 'title', 'type'])->where(['type' => $type[0]]);
+        $query = ArticleTrain::find()->select(['id', 'title', 'type'])->where(['type' => $type[0]])->orderBy('id DESC');
         //$query = ArticleTrain::find()->all();
         $countQuery = clone $query;
         $pages = new Pagination(['totalCount'=> $countQuery->count()]);
@@ -115,9 +115,9 @@ class TrainController extends Controller
         $id = $_GET['id'];
         $presentArticle = ArticleTrain::find()->where('id=' . $id)->one();
         //上一条:select * from 表 where 数据id<@当前显示数据id order by 数据_id asc) limit 1
-        $previousArticle = ArticleTrain::find()->select(['id', 'title', 'type'])->where('id<' . $id)->orderBy('id DESC')->limit(1)->one();
+        $previousArticle = ArticleTrain::find()->select(['id', 'title', 'type'])->where('id>' . $id)->orderBy('id ASC')->limit(1)->one();
         //下一条:select * from 表 where 数据id>@当前显示数据id order by 数据_id desc) limit 1
-        $nextArticle = ArticleTrain::find()->select(['id', 'title', 'type'])->where('id>' . $id)->orderBy('id ASC')->limit(1)->one();
+        $nextArticle = ArticleTrain::find()->select(['id', 'title', 'type'])->where('id<' . $id)->orderBy('id DESC')->limit(1)->one();
         
         
         

@@ -28,21 +28,19 @@
             </div><!--/span-->
             
             <div class="col-xs-12 col-sm-12" id="sidebar" role="navigation">
+                 <div class="col-xs-12 col-sm-12" id="sidebar" role="navigation">
                  <div class="col-md-12">
+                     <ul>
                     <?php
                         foreach ($models as $model) {
-                        echo '<dl class="dl-horizontal">';
-                        echo '<dt><font color="red" size=1;>[';
-                        echo $news->getItem()[1];
-                        echo ']</font></dt>';
-                        echo '<dd><a href="?r=news/article&id=' . $model->id . '">'; 
+                        echo '<li><a href="?r=news/article&id=' . $model->id . '">'; 
                         echo $model->title;
-                        echo '</a></dd>';
-                        echo '<hr style="margin-top: 4px;"></dl>';
-                        echo '';
+                        echo '</a><hr style="margin-top: 4px;"></li>';
                         }
                     ?>
+                         </ul>
                 <div>
+            </div>
             </div>
                 
                 <div class="text-center">

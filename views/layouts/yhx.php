@@ -21,7 +21,7 @@ AppAsset::register($this);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="http://v3.bootcss.com/docs-assets/ico/favicon.png">
+    <link rel="shortcut icon" href="http://www.yhx.biz/favicon.ico" type="image/ico">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
